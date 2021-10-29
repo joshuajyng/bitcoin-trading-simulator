@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A2.Views.buybtc">
+    <NavigationPage.TitleView>
+        <Label Text="Buy / Sell Bitcoin" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid Padding=" 35,10">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Text="Cash:"
+                   FontSize="25"
+                   Grid.Row="0"
+            ></Label>
+            <Label x:Name="Cash"
+                   FontSize="25"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="2"
+                   Grid.Column="1"
+            ></Label>
+            <Label Text="Bitcoin Owned:"
+                   FontSize="25"
+                   Grid.Row="1"
+            ></Label>
+            <Label x:Name="owned"
+                   FontSize="25"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   Grid.Column="1"
+            ></Label>
+            <Label Text="BTC Current Price:"
+                   FontSize="25"
+                   Grid.Row="2"
+            ></Label>
+            <Label x:Name="CurrPrice"
+                   
+                   FontSize="18"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                  
+            ></Label>
+            <Button Text="Reload"
+                    Clicked="reloadPrice"
+                   CornerRadius="35"
+                   FontSize="15"
+                   Grid.Row="2"
+                   Grid.Column="2"
+                   WidthRequest="85"
+                   HeightRequest="85"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+            ></Button>
+            <Label Text="Amount:"
+                   FontSize="25"
+                   Grid.Row="3"
+                   VerticalOptions="Center"
+            ></Label>
+            <Entry
+                    x:Name="amountentry"
+                   FontSize="25"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                    VerticalOptions="Center"
+                    Grid.ColumnSpan="2"
+            ></Entry>
+            <Button Text="Buy"
+                    Clicked="Buy"
+                   FontSize="25"
+                   Grid.Row="4"
+                    BackgroundColor="LawnGreen"
+                   VerticalOptions="Center"
+            ></Button>
+            <Button Text="Sell"
+                    Clicked="Sell"
+                   FontSize="25"
+                    BackgroundColor="Red"
+                   Grid.Row="4"
+                    Grid.Column="2"
+                   VerticalOptions="Center"
+            ></Button>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

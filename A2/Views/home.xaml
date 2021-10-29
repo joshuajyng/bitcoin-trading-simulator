@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A2.Views.home">
+    <NavigationPage.TitleView>
+        <Label Text="Bitcoin Trading Simulator" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid Padding=" 35,10">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Text="Cash:"
+                   FontSize="25"
+                   Grid.Row="0"
+            ></Label>
+            <Label x:Name="Cash"
+                   FontSize="25"
+                   Grid.Row="0"
+                   Grid.Column="1"
+            ></Label>
+            <Label Text="Bitcoin Owned:"
+                   FontSize="25"
+                   Grid.Row="1"
+            ></Label>
+            <Label x:Name="owned"
+                   FontSize="25"
+                   Grid.Row="1"
+                   Grid.Column="1"
+            ></Label>
+            <Label Text="Total Value:
+                   (cash +
+                   owned btc *
+                   btc price)"
+                   FontSize="25"
+                   Grid.Row="2"
+                   Grid.RowSpan="2"
+            ></Label>
+            <Label 
+                   x:Name="totalval"
+                   FontSize="25"
+                   Grid.Row="2"
+                   Grid.Column="1"
+            ></Label>
+            
+            <Button Text="Buy/Sell"
+                   FontSize="25"
+                   Grid.Row="4"
+                   HorizontalOptions="Center"
+                   Clicked="navToBuyBTC"
+            ></Button>
+            <Button Text="History"
+                   FontSize="25"
+                   Grid.Column="1"
+                   Grid.Row="4"
+                    Clicked="navToHist"
+                   HorizontalOptions="Center"
+            ></Button>
+        </Grid>
+       
+    </ContentPage.Content>
+</ContentPage>

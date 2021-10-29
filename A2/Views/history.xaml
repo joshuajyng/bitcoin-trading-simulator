@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="A2.Views.history">
+    <NavigationPage.TitleView>
+        <Label Text="Transaction History" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Label Grid.Column="0" Text="Cash"></Label>
+                <Label Grid.Column="1" Text="BTC"></Label>
+                <Label Grid.Column="2" Text="Amount"></Label>
+                <Label Grid.Column="3" Text="Buy/Sell"></Label>
+            </Grid>
+            <ListView
+                x:Name="TransItems"
+                BackgroundColor="White"
+                >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Grid.Column="0" Text="{Binding Cash}"></Label>
+                                <Label Grid.Column="1" Text="{Binding Btc}"></Label>
+                                <Label Grid.Column="2" Text="{Binding Amount}"></Label>
+                                <Label Grid.Column="3" Text="{Binding Buy}"></Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    
+    </ContentPage.Content>
+</ContentPage>
