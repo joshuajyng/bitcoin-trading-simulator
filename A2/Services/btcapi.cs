@@ -10,7 +10,8 @@ namespace A2.Services
 {
     public class btcapi
     {
-        private string url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=1&convert=USD&CMC_PRO_API_KEY=6cea20ec-185b-4ac6-b08f-7d999a457f70";
+        //Insert your Private Key from coinmarketcap here
+        private string url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=1&convert=USD&CMC_PRO_API_KEY=";
 
         
         public btcapi()
